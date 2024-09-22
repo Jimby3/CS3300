@@ -98,6 +98,7 @@ With Node.js and npm installed, you can now install Angular CLI.
    - Run the following command to start the Angular development server:
      ```bash
      ng serve
+     npm install
      ```
 
 3. **Access the Application:**
