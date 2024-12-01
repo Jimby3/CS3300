@@ -7,7 +7,7 @@ import { Class } from './class.model';
   providedIn: 'root'
 })
 export class ClassesService {
-  private baseUrl = 'https://76.155.212.102:3000/api/classes';
+  private baseUrl = 'https://tasktrackr.ddns.net:3000/api/classes';
 
   constructor(private http: HttpClient) {}
 

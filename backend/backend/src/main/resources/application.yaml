@@ -32,18 +32,18 @@ frontend:
   url: https://jimby3.github.io/CS3300/
 
 server:
-  port: 3000  # Set HTTPS port
+  port: 3000
   ssl:
-    enabled: true  # Enable SSL
-    key-store: classpath:keystore.jks  # Path to your keystore file
-    key-store-password: password  # Keystore password
-    key-store-type: JKS  # Keystore type (JKS in this case)
-    key-alias: selfsigned  # Alias for the certificate in the keystore
-  # Redirect HTTP traffic to HTTPS (Optional)
+    enabled: true
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-store-type: PKCS12
+    key-alias: tomcat
+
   http:
     enabled: true
-    port: 80  # HTTP port
-    redirect-port: 3000  # Redirect HTTP to HTTPS port
+    port: 80
+    redirect-port: 3000
 
 
 logging.level.root: INFO
