@@ -14,6 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/cs3300",
+            "baseHref": "/CS3300/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -38,8 +39,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/env.js",
-                  "with": "src/environments/env.production.js"
+                  "replace": "src/assets/environments/env.js",
+                  "with": "src/assets/environments/env.production.js"
                 }
               ],
               "budgets": [
@@ -51,7 +52,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"
@@ -101,6 +102,9 @@
               "src/environments/env.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

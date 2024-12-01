@@ -17,6 +17,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   // Declare components here
@@ -28,16 +29,17 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     RegisterComponent,
     ResetPasswordComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    NavbarComponent,
-    NgxChartsModule,
-    PieChartComponent,
-    ReactiveFormsModule,
-    RouterModule.forRoot(routes),
-    FontAwesomeModule,
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        NavbarComponent,
+        NgxChartsModule,
+        PieChartComponent,
+        ReactiveFormsModule,
+        RouterModule.forRoot(routes),
+        FontAwesomeModule,
+        NgOptimizedImage,
+    ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimationsAsync(),

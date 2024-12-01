@@ -7,7 +7,7 @@ import { Class } from './class.model';
   providedIn: 'root'
 })
 export class ClassesService {
-  private baseUrl = 'http://localhost:8080/api/classes';
+  private baseUrl = 'https://76.155.212.102:3000/api/classes';
 
   constructor(private http: HttpClient) {}
 
