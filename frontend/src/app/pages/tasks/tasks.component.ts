@@ -245,7 +245,7 @@ export class TasksComponent implements OnInit {
       this.newTaskTimeAll = 0;
       this.newTaskStatus = '';
       this.newTaskPriority = '!';
-      this.newTaskClassId = 0;
+      this.newTaskClassId = this.classes.length === 1 ? this.classes[0].id : 0; // Set default class ID if only one class
     }
     this.isModalOpen = true;
   }
